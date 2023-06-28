@@ -1,5 +1,12 @@
 # CodeIgniter 4 Application Starter
-
+## xampp
+Para iniciar la aplicacion se debe ejecutar MySQL y apache de Xampp pero luego antes de ejecutarlo se debe configurar a apache config -> php.ini
+Una vez en php.ini descomentar `;extension=intl` y deberia de quedar `extension=intl`
+## Acordarse
+Clonar en htdocs
+## Comandos importantes 
+Instalar composer
+`composer require codeigniter4/framework`
 ## What is CodeIgniter?
 
 CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
