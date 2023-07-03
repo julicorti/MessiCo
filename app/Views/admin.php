@@ -9,7 +9,7 @@
   <title>Stock</title>
 </head>
 
-<body>
+<body class="admin-body">
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -20,11 +20,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Stock</a>
+          <li class="nav-item">
+              <a class="nav-link" href="<?= base_url('/') ?>">Stock</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Facturacion</a>
+              <a class="nav-link" href="<?= base_url('/facturacion')?>">Facturacion</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?= base_url('/logout') ?>">LogOut</a>
@@ -34,14 +34,14 @@
       </div>
     </nav>
   </header>
-  <main>
+  <main  >
 
     <h1>Stock</h1>
 
     <div class="contenedor-admin">
 
       <?php foreach ($products as $index => $p) { ?>
-        <div class="card" style="width: 16rem">
+        <div class="card" style="width: 20rem">
           <h5 class="card-title">
             <?= $p["name"] ?>
           </h5>
@@ -61,20 +61,20 @@
               id="stock<?= $p["id_product"] ?>" />
             <button class="boton" onclick="removeStock('<?= $p['id_product'] ?>')">-</button>
           </div>
-
+          
         </div>
       <?php } ?>
       <form action="<?= base_url("/updateProducts") ?>" method="post" id="formDataPost" style="display: none;">
         <input type="text" name="data" id="dataPost">
       </form>
-      <button onclick="postData()">Guardar Cambios</button>
+      <button class="boton-guardar" onclick="postData()">Guardar Cambios</button>
     </div>
 
 
     <div class="createProduct">
+     
+      <div class="carta-agregar ">
       <h2>Agregar un nuevo producto</h2>
-      <div class="carta-agregar carta">
-
         <form action="<?= base_url('/createNewProduct') ?>" method="POST" enctype="multipart/form-data">
 
           <input type="file" name="image">

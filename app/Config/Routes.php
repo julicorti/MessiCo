@@ -36,7 +36,15 @@ $routes->post('/login', 'Home::login');
 $routes->get('/logout', 'Home::logout');
 $routes->post('/createNewProduct', 'Home::createNewProduct');
 $routes->post('/updateProducts', 'Home::updateAllProducts');
-
+$routes->get('/ingresar_productos', 'Home::ingreso_productos');
+$routes->post('/ingresoCodigo', 'Home::ingresoCodigo');
+$routes->get('/carrito', 'Home::carrito');
+$routes->get('/eliminarDeCarrito/(:any)', 'Home::eliminarDeCarrito/$1');
+$routes->get('/cobrar/(:any)', 'Home::cobrar/$1');
+$routes->get('/caja', 'Home::caja');
+$routes->post('/cerrarCaja', 'Home::cerrarCaja');
+$routes->get('/facturacion', 'Home::facturacion');
+$routes->get('/ticket/(:any)', 'Home::ticket/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

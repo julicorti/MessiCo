@@ -22,7 +22,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav mx-auto">
             <a class="nav-link active" aria-current="page" href="#">Empleado: <?= $fullname?></a>
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="<?= base_url('/carrito')?>">Carrito</a>
+            <a class="nav-link" href="<?= base_url('/ingresar_productos')?>">Ingreso Productos</a>
             <a class="nav-link" href="<?= base_url('/logout') ?>">LogOut</a>
           </div>
         </div>
@@ -34,18 +35,21 @@
     <div class="contenedor">
 
       <div class="carta">
-        <img src="<?= base_url('public/image/carrito.png') ?>" alt="" />
+        <a href="<?= base_url('/carrito') ?>"><img src="<?= base_url('public/image/carrito.png') ?>" alt="" /></a>
       </div>
 
       <div class="carta">
         <div class="contenido">
-          <a href="./empleado.php">
+          <a href="<?= base_url("/ingresar_productos") ?>">
             <h3>Ingreso Productos</h3>
           </a>
         </div>
       </div>
       <div class="carta">
-        <img src="<?= base_url('public/image/pesos.png') ?>" alt="" />
+        <a href="<?= base_url("/caja")?>">
+
+          <img src="<?= base_url('public/image/pesos.png') ?>" alt="" />
+        </a>
       </div>
     </div>
   </main>

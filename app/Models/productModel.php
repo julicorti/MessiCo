@@ -23,5 +23,10 @@ class productModel extends Model{
         $table->set($data);
         return $table->update();
     }
-
+    public function obtenerCodigoDeBarras($codigoBarra){
+        $table = $this->db->table('t_products');
+        $table ->where('codigoDeBarra', $codigoBarra);
+        return $table->get()->getResultArray();
+    }
+    
 }
